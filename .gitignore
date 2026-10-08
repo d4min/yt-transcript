@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing and tooling
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+
+# Editors and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Generated transcripts (keep the folder itself)
+transcripts/*
+!transcripts/.gitkeep
+
+# Temporary subtitle and download files
+*.vtt
+*.srt
+*.ass
+*.ssa
+*.lrc
+*.ttml
+*.srv1
+*.srv2
+*.srv3
+*.json3
+*.part
+*.ytdl
+
+# Test fixtures intentionally use subtitle formats
+!tests/fixtures/*.vtt
+!tests/fixtures/*.srt

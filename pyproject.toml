@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-transcript"
+dynamic = ["version"]
+description = "Convert YouTube videos and playlists into clean, timestamped, LLM-ready Markdown transcripts."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "d4min" }]
+requires-python = ">=3.10"
+dependencies = ["yt-dlp>=2025.1.15"]
+keywords = ["youtube", "transcript", "captions", "subtitles", "markdown", "llm", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov>=4", "pyyaml>=6"]
+
+[project.urls]
+Homepage = "https://github.com/d4min/yt-transcript"
+Issues = "https://github.com/d4min/yt-transcript/issues"
+
+[project.scripts]
+yt-transcript = "yt_transcript.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "yt_transcript.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -m 'not network'"
+markers = [
+    "network: tests that contact YouTube (deselected by default; run with -m network)",
+]
+
+[tool.coverage.run]
+source = ["yt_transcript"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

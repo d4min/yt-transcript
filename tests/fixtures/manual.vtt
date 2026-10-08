@@ -1,0 +1,38 @@
+WEBVTT
+Kind: captions
+Language: en
+
+STYLE
+::cue(.highlight) { color: yellow; }
+
+NOTE
+Hand-written subtitles with speaker tags, styling,
+entities and one duplicated event.
+
+intro-1
+00:00:00.500 --> 00:00:03.000
+<v Host>Welcome back to the workshop.</v>
+
+intro-1-dup
+00:00:00.500 --> 00:00:03.000
+<v Host>Welcome back to the workshop.</v>
+
+00:00:03.000 --> 00:00:06.200 line:85% align:center
+Today we'll cover <i>caption files</i>
+and why they're surprisingly messy.
+
+00:00:06.200 --> 00:00:09.000
+There will be a short Q&amp;A at the end.
+
+00:00:12.500 --> 00:00:15.000
+<c.highlight>First</c>, a quick bit of history.
+
+00:00:15.000 --> 00:00:18.000
+Subtitles were designed for screens, not for reading.
+
+00:00:18.000 --> 00:00:21.500
+That's why they come in tiny,
+time-boxed&nbsp;fragments.
+
+00:00:21.500 --> 00:00:24.000
+See you next time.

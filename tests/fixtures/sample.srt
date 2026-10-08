@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:02,000
+This is a subtitle file in SubRip format.
+
+2
+00:00:02,000 --> 00:00:04,500
+It has <i>italic</i> text
+and two lines in one cue.
+
+3
+00:00:04,500 --> 00:00:06,000
+Café, naïve and 東京 survive intact.
